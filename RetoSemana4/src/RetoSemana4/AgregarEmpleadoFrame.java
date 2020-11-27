@@ -55,8 +55,10 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1AgregarEmpleados = new javax.swing.JButton();
         jTextFieldSalario = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
         getContentPane().setLayout(null);
 
         jLabel1.setText("Nombre*");
@@ -115,6 +117,13 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         getContentPane().add(jTextFieldSalario);
         jTextFieldSalario.setBounds(260, 200, 200, 20);
 
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Ingresar Empleado");
+        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(145, 20, 200, 20);
+
         setBounds(0, 0, 506, 389);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -168,6 +177,7 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextFieldApellido;
     private javax.swing.JTextField jTextFieldCargo;
     private javax.swing.JTextField jTextFieldCelular;
