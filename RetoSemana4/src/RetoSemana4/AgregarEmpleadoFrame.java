@@ -59,52 +59,49 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
+        setMaximumSize(new java.awt.Dimension(490, 400));
+        setPreferredSize(new java.awt.Dimension(490, 400));
+        setSize(new java.awt.Dimension(490, 400));
         getContentPane().setLayout(null);
 
         jLabel1.setText("Nombre*");
         jLabel1.setToolTipText("");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 50, 50, 20);
+        jLabel1.setBounds(30, 70, 50, 20);
 
         jLabel2.setText("Apellido");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(260, 50, 50, 20);
-
-        jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreActionPerformed(evt);
-            }
-        });
+        jLabel2.setBounds(260, 70, 50, 20);
         getContentPane().add(jTextFieldNombre);
-        jTextFieldNombre.setBounds(30, 75, 200, 20);
+        jTextFieldNombre.setBounds(30, 95, 200, 30);
         getContentPane().add(jTextFieldApellido);
-        jTextFieldApellido.setBounds(260, 75, 200, 20);
+        jTextFieldApellido.setBounds(260, 95, 200, 30);
 
         jLabel3.setText("Correo*");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 110, 50, 20);
+        jLabel3.setBounds(30, 140, 50, 20);
 
         jLabel4.setText("Celular*");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(260, 110, 50, 20);
+        jLabel4.setBounds(260, 140, 50, 20);
         getContentPane().add(jTextFieldCorreo);
-        jTextFieldCorreo.setBounds(30, 135, 200, 20);
+        jTextFieldCorreo.setBounds(30, 165, 200, 30);
         getContentPane().add(jTextFieldCelular);
-        jTextFieldCelular.setBounds(260, 135, 200, 20);
+        jTextFieldCelular.setBounds(260, 165, 200, 30);
 
         jLabel5.setText("Salario*");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(260, 170, 50, 20);
+        jLabel5.setBounds(260, 210, 50, 20);
         getContentPane().add(jTextFieldCargo);
-        jTextFieldCargo.setBounds(30, 255, 200, 20);
+        jTextFieldCargo.setBounds(30, 305, 200, 30);
 
         jCheckBoxProveedor.setText("Proveedor");
         getContentPane().add(jCheckBoxProveedor);
-        jCheckBoxProveedor.setBounds(30, 170, 200, 20);
+        jCheckBoxProveedor.setBounds(30, 210, 200, 20);
 
         jLabel6.setText("Cargo");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 230, 50, 20);
+        jLabel6.setBounds(30, 280, 50, 20);
 
         jButton1AgregarEmpleados.setText("Agregar Empleados");
         jButton1AgregarEmpleados.addActionListener(new java.awt.event.ActionListener() {
@@ -113,26 +110,34 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1AgregarEmpleados);
-        jButton1AgregarEmpleados.setBounds(145, 300, 200, 20);
+        jButton1AgregarEmpleados.setBounds(145, 355, 200, 30);
         getContentPane().add(jTextFieldSalario);
-        jTextFieldSalario.setBounds(260, 200, 200, 20);
+        jTextFieldSalario.setBounds(260, 235, 200, 30);
 
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Ingresar Empleado");
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(145, 20, 200, 20);
+        jLabel7.setBounds(145, 30, 200, 20);
 
-        setBounds(0, 0, 506, 389);
+        setBounds(0, 0, 506, 454);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreActionPerformed
-
     private void jButton1AgregarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1AgregarEmpleadosActionPerformed
-        // TODO add your handling code here:
+        Empleado emps = new Empleado();
+        String proveedor="";
+        
+        emps.setNombre(jTextFieldNombre.getText());
+        emps.setApellido(jTextFieldApellido.getText());
+        emps.setCorreo(jTextFieldCorreo.getText());
+        emps.setCelular(jTextFieldCelular.getText());
+        if (jCheckBoxProveedor.isSelected()){
+            proveedor = "Proveedor";
+        }
+        emps.setSalario(Integer.parseInt(jTextFieldSalario.getText()));
+        emps.setCargo(jTextFieldCargo.getText());
+        JOptionPane.showMessageDialog(this, "Empleado Creado");
     }//GEN-LAST:event_jButton1AgregarEmpleadosActionPerformed
 
     /**
