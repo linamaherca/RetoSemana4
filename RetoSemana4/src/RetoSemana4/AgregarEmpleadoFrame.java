@@ -97,7 +97,7 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         getContentPane().add(jButton1AgregarEmpleados);
         jButton1AgregarEmpleados.setBounds(145, 300, 200, 20);
 
-        setBounds(0, 0, 505, 409);
+        setBounds(0, 0, 506, 389);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
