@@ -1,4 +1,5 @@
 package RetoSemana4;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,8 +18,20 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
      */
     public AgregarEmpleadoFrame() {
         initComponents();
+        setNombresComponentes();
     }
-
+    private void setNombresComponentes(){
+        jTextFieldNombre.setName("nombre");
+        jTextFieldApellido.setName("apellido");
+        jTextFieldCorreo.setName("correo");
+        jTextFieldCelular.setName("celular");
+        jTextFieldSalario.setName("salario");
+        jTextFieldCargo.setName("cargo");
+        
+        jCheckBoxProveedor.setName("proveedor");
+        
+        jButton1AgregarEmpleados.setName("agregar");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,11 +50,11 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         jTextFieldCorreo = new javax.swing.JTextField();
         jTextFieldCelular = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextFieldSalario = new javax.swing.JTextField();
+        jTextFieldCargo = new javax.swing.JTextField();
         jCheckBoxProveedor = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
-        javax.swing.JTextField jTextFieldCargo = new javax.swing.JTextField();
         jButton1AgregarEmpleados = new javax.swing.JButton();
+        jTextFieldSalario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -80,8 +93,8 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         jLabel5.setText("Salario*");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(260, 170, 50, 20);
-        getContentPane().add(jTextFieldSalario);
-        jTextFieldSalario.setBounds(260, 200, 200, 20);
+        getContentPane().add(jTextFieldCargo);
+        jTextFieldCargo.setBounds(30, 255, 200, 20);
 
         jCheckBoxProveedor.setText("Proveedor");
         getContentPane().add(jCheckBoxProveedor);
@@ -90,12 +103,12 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         jLabel6.setText("Cargo");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(30, 230, 50, 20);
-        getContentPane().add(jTextFieldCargo);
-        jTextFieldCargo.setBounds(30, 255, 200, 20);
 
         jButton1AgregarEmpleados.setText("Agregar Empleados");
         getContentPane().add(jButton1AgregarEmpleados);
         jButton1AgregarEmpleados.setBounds(145, 300, 200, 20);
+        getContentPane().add(jTextFieldSalario);
+        jTextFieldSalario.setBounds(260, 200, 200, 20);
 
         setBounds(0, 0, 506, 389);
     }// </editor-fold>//GEN-END:initComponents
@@ -132,10 +145,8 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AgregarEmpleadoFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new AgregarEmpleadoFrame().setVisible(true);
         });
     }
 
@@ -149,6 +160,7 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextFieldApellido;
+    private javax.swing.JTextField jTextFieldCargo;
     private javax.swing.JTextField jTextFieldCelular;
     private javax.swing.JTextField jTextFieldCorreo;
     private javax.swing.JTextField jTextFieldNombre;
