@@ -105,6 +105,11 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         jLabel6.setBounds(30, 230, 50, 20);
 
         jButton1AgregarEmpleados.setText("Agregar Empleados");
+        jButton1AgregarEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1AgregarEmpleadosActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1AgregarEmpleados);
         jButton1AgregarEmpleados.setBounds(145, 300, 200, 20);
         getContentPane().add(jTextFieldSalario);
@@ -116,6 +121,10 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
     private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNombreActionPerformed
+
+    private void jButton1AgregarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1AgregarEmpleadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1AgregarEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments
