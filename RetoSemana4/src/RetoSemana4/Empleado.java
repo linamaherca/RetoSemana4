@@ -1,3 +1,5 @@
+package RetoSemana4;
+
 
 
 public class Empleado {
@@ -10,6 +12,13 @@ public class Empleado {
     private int salario;
     private String cargo;
 
+    public Empleado(String nombre, String correo, String celular, int salario) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.celular = celular;
+        this.salario = salario;
+    }
+    
     public Empleado() {
     }
 
