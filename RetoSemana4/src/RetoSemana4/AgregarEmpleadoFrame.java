@@ -1,4 +1,5 @@
 package RetoSemana4;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author linam
  */
 public class AgregarEmpleadoFrame extends javax.swing.JFrame {
-
+    ArrayList<Empleado> vEmpleado = new ArrayList<>();
     /**
      * Creates new form AgregarEmpleadoFrame
      */
@@ -137,8 +138,13 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         }
         emps.setSalario(Integer.parseInt(jTextFieldSalario.getText()));
         emps.setCargo(jTextFieldCargo.getText());
+        
+        vEmpleado.add(emps);
         JOptionPane.showMessageDialog(this, "Empleado Creado");
         System.out.println("Empleado Creado");
+        
+
+        
     }//GEN-LAST:event_jButton1AgregarEmpleadosActionPerformed
 
     /**
