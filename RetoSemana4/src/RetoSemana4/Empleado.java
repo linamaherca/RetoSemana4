@@ -90,6 +90,6 @@ public class Empleado {
     public String toString() {
         return "Empleado{" + "id=" + id + "\n nombre=" + nombre + "\n apellido=" + apellido + "\n correo=" + correo + "\n celular=" + celular + "\n esProveedor=" + esProveedor + "\n salario=" + salario + "\n cargo=" + cargo + '}';
     }
-    
+        
 }
 

@@ -121,7 +121,7 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(145, 30, 200, 20);
 
-        setBounds(0, 0, 506, 454);
+        setBounds(0, 0, 506, 444);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1AgregarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1AgregarEmpleadosActionPerformed
@@ -138,6 +138,7 @@ public class AgregarEmpleadoFrame extends javax.swing.JFrame {
         emps.setSalario(Integer.parseInt(jTextFieldSalario.getText()));
         emps.setCargo(jTextFieldCargo.getText());
         JOptionPane.showMessageDialog(this, "Empleado Creado");
+        System.out.println("Empleado Creado");
     }//GEN-LAST:event_jButton1AgregarEmpleadosActionPerformed
 
     /**
