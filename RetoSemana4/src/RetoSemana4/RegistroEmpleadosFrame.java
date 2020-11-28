@@ -46,6 +46,7 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
         jButtonAgregarEmpleado = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jListEmpleado = new javax.swing.JList<>();
+        jButtonActualizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -73,6 +74,15 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
         jScrollPane1.setBounds(30, 120, 430, 255);
         jScrollPane1.getAccessibleContext().setAccessibleName("");
 
+        jButtonActualizar.setText("Agregar");
+        jButtonActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonActualizarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonActualizar);
+        jButtonActualizar.setBounds(360, 70, 100, 30);
+
         setBounds(0, 0, 506, 444);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -80,6 +90,11 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
         AgregarEmpleadoFrame verAgregarEmpleadoFrame = new AgregarEmpleadoFrame();
         verAgregarEmpleadoFrame.setVisible(true);
     }//GEN-LAST:event_jButtonAgregarEmpleadoActionPerformed
+
+    private void jButtonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarActionPerformed
+        ActualizarEliminarEmpleadoFrame verActualizarEliminarEmpleadoFrame = new ActualizarEliminarEmpleadoFrame();
+        verActualizarEliminarEmpleadoFrame.setVisible(true);
+    }//GEN-LAST:event_jButtonActualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,6 +133,7 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonActualizar;
     private javax.swing.JButton jButtonAgregarEmpleado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jListEmpleado;
