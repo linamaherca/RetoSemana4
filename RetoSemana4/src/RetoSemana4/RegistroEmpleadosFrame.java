@@ -1,6 +1,8 @@
-
+package RetoSemana4;
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,6 +15,8 @@ import javax.swing.JList;
  * @author marce
  */
 public class RegistroEmpleadosFrame extends javax.swing.JFrame {
+    ArrayList<Empleado> vEmpleado = new ArrayList<>();
+    DefaultListModel moEmpleado;
 
     /**
      * Creates new form RegistroEmpleados
@@ -23,7 +27,7 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
     }
     
     private void setNombresComponentes(){
-       jList1.setName("listaEmpleados");
+       jListEmpleado.setName("listaEmpleados");
         
        jButtonAgregarEmpleado.setName("agregar");
     } 
@@ -41,7 +45,7 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButtonAgregarEmpleado = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListEmpleado = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -54,15 +58,16 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
         jLabel1.setBounds(145, 30, 200, 20);
 
         jButtonAgregarEmpleado.setText("Agregar Empleado");
+        jButtonAgregarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgregarEmpleadoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonAgregarEmpleado);
         jButtonAgregarEmpleado.setBounds(30, 70, 200, 30);
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        jListEmpleado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Lista de empleados", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jScrollPane1.setViewportView(jListEmpleado);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(30, 120, 430, 255);
@@ -70,6 +75,11 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
 
         setBounds(0, 0, 506, 444);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonAgregarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarEmpleadoActionPerformed
+        AgregarEmpleadoFrame verAgregarEmpleadoFrame = new AgregarEmpleadoFrame();
+        verAgregarEmpleadoFrame.setVisible(true);
+    }//GEN-LAST:event_jButtonAgregarEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,7 +120,7 @@ public class RegistroEmpleadosFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAgregarEmpleado;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jListEmpleado;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
